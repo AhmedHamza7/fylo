@@ -1,0 +1,248 @@
+/*     C  E  N  T  E  R     */
+/*        S  H  A  P  E  S      */
+/*    B  U  T  T  O  N  S    */
+/* ====== clients background =====*/
+@font-face {
+  font-family: "main-font";
+  src: url("../../fonts/OpenSans-VariableFont_wdth,wght.ttf");
+}
+@font-face {
+  font-family: "head-font";
+  src: url("../../fonts/Raleway-VariableFont_wght.ttf");
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.section-padding {
+  padding-block: 60px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.button-style {
+  padding: 12px 65px;
+  background: linear-gradient(to right, hsl(176deg, 68%, 64%), hsl(198deg, 60%, 50%));
+  color: white;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.button-style:hover {
+  background: hsl(176deg, 68%, 64%);
+}
+
+.title {
+  text-align: center;
+  margin-block: 20px 80px;
+  font-size: 40px;
+  position: relative;
+  /* make title underline reponsive */
+}
+.title h3 {
+  font-weight: 300;
+}
+.title::before {
+  content: "";
+  position: absolute;
+  text-align: center;
+  left: 42%;
+  transform: translateX(-42%);
+  bottom: -20px;
+  width: 30px;
+  margin: auto;
+  height: 2px;
+  background: linear-gradient(to right, hsl(176deg, 68%, 64%), hsl(198deg, 60%, 50%));
+}
+.title::after {
+  content: "";
+  position: absolute;
+  text-align: center;
+  left: 53%;
+  transform: translateX(-53%);
+  bottom: -20px;
+  width: 195px;
+  margin: auto;
+  height: 2px;
+  background: linear-gradient(to right, hsl(176deg, 68%, 64%), hsl(198deg, 60%, 50%));
+}
+@media (max-width: 1200px) {
+  .title {
+    font-size: 35px;
+  }
+  .title::before {
+    left: 35%;
+    transform: translateX(-35%);
+  }
+}
+@media (max-width: 768px) {
+  .title::before {
+    left: 30%;
+    transform: translateX(-30%);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.3s ease all;
+}
+
+body {
+  font-family: "main-font";
+  overflow-x: hidden;
+  background-color: hsl(218deg, 28%, 13%);
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+ul li {
+  display: inline-block;
+}
+
+nav, button, h1, h2, h3, h4 {
+  font-family: "head-font";
+}
+
+/*====== nav style ======*/
+nav {
+  width: 100%;
+  z-index: 999;
+  background-color: hsl(217deg, 28%, 15%);
+  /* ===== display mobile navigation =====*/
+}
+nav #check, nav .checkbtn {
+  display: none;
+}
+nav .nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 15px;
+}
+nav .nav-content .nav-logo img {
+  width: 150px;
+}
+nav .nav-content .nav-list {
+  font-size: 18px;
+}
+nav .nav-content .nav-list ul li {
+  margin-inline: 18px;
+  color: hsl(233deg, 8%, 62%);
+  position: relative;
+}
+nav .nav-content .nav-list ul li:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(to right, hsl(176deg, 68%, 64%), hsl(198deg, 60%, 50%));
+  transition: 0.3s ease all;
+}
+nav .nav-content .nav-list ul li:hover {
+  color: white;
+}
+nav .nav-content .nav-list ul li:hover::after {
+  width: 100%;
+}
+@media (max-width: 992px) {
+  nav {
+    /* ======= OPEN MOBILE NAV =======*/
+  }
+  nav #close-nav {
+    display: none;
+  }
+  nav .checkbtn {
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    top: 17px;
+    cursor: pointer;
+  }
+  nav .checkbtn img {
+    width: 40px;
+    height: 20px;
+  }
+  nav .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 15px;
+  }
+  nav .nav-content .nav-list {
+    position: absolute;
+    top: -1120%;
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  nav .nav-content .nav-list ul li {
+    margin-block: 25px;
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+  nav .nav-content .nav-list ul li:hover {
+    color: black;
+  }
+  nav .nav-content .nav-list ul li:hover::after {
+    width: 100%;
+  }
+  nav .nav-content .nav-button {
+    display: none;
+  }
+  nav #check:checked ~ .nav-content .nav-list {
+    top: 120%;
+  }
+}
+
+/*====== header style ======*/
+header {
+  height: 100vh;
+  padding-block: 100px;
+  background-color: hsl(217deg, 28%, 15%);
+  background-image: url("../images/bg-curvy-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .container .header-content {
+  text-align: center;
+  color: white;
+}
+header .container .header-content .header-img img {
+  width: 70%;
+}
+header .container .header-content .header-text h2 {
+  font-size: 30px;
+  line-height: 40px;
+}
+header .container .header-content .header-text p {
+  margin-block: 25px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title FYLO 
+
+        link(rel='stylesheet' href='styles/all.min.css')
+        link(rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css")
+        link(rel="stylesheet", href="styles/style.css")
+    body
+        //- ======= Nav section ========
+        nav(class='section-padding')
+            input(type="checkbox" id="check")
+            label(for="check" class="checkbtn")
+                img(src='images/icon-hamburger.svg' id='open-nav')
+            .nav-content(class='container')
+                .nav-logo
+                    img(src='images/logo.svg')
+                .nav-list
+                    ul
+                        each val in ['Home', 'Features', 'Team','Sign up']
+                            a(href='#'+ val)
+                                li.pointer=val 
+
+        //- ======= header section =====
+        header 
+            .container 
+                .header-content 
+                    .header-img 
+                        img(src='images/illustration-intro.png')
+                    .header-text
+                        h2 All your files in one secure location,#[br] accessible anywhere.
+                        p Fylo stores all your most important files in one secure location. #[br] Access them wherever 
+                            |you need, share and collaborate #[br] with friends family, and co-workers.
+                    .header-button
+                        button(class='button-style') Get Started
+
+        //- ===== features section =====
+        section(class='features section-padding')
+            .container 
+                .features-content
+                    |dsad

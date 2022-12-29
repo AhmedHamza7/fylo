@@ -1,0 +1,63 @@
+@mixin container($w) {
+    width: $w;
+    margin:auto;
+}
+
+@mixin overlay {
+    position: absolute;
+    left: 0;
+    top:0;
+    bottom: 0;
+    right: 0;
+}
+
+@mixin backgroundOptions {
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+}
+
+@mixin inputStyle {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+/*     C  E  N  T  E  R     */
+
+@mixin flexible($content) {
+    display: flex;
+    justify-content: $content;
+    align-items: center;
+}
+
+/*        S  H  A  P  E  S      */
+@mixin circleIcon($dimenshions, $bg) {
+    width:$dimenshions;
+    height: $dimenshions;
+    border-radius: 50%;
+    background-color: $bg;
+}
+
+
+/*    B  U  T  T  O  N  S    */
+
+
+
+/* ====== clients background =====*/ 
+
+@mixin clientBackground {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left:0;
+    top:0;
+    height: 0%;
+    width: 100%;
+    border-radius: 20px;
+    transition: 0.4s all ease;
+}
+

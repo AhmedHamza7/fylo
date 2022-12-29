@@ -1,0 +1,16 @@
+$main-background:hsl(218, 28%, 13%);
+$intro-background:hsl(217, 28%, 15%);
+$feedback-background:hsl(219, 30%, 18%);
+
+$button-gradient: linear-gradient(to right , hsl(176, 68%, 64%) , hsl(198, 60%, 50%));
+$button-hover:hsl(176, 68%, 64%);
+$footer-background:hsl(216, 53%, 9%);
+@font-face {
+    font-family: 'main-font';
+    src:url('../../fonts/OpenSans-VariableFont_wdth,wght.ttf')
+}
+
+@font-face {
+    font-family: 'head-font';
+    src:url('../../fonts/Raleway-VariableFont_wght.ttf')
+}

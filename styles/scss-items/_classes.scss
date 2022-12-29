@@ -1,0 +1,77 @@
+
+@use '_vars' as *;
+
+.container {
+    width:80%;
+    margin: auto;
+}
+
+.section-padding {
+    padding-block: 60px;
+}
+.pointer {
+    cursor: pointer;
+}
+
+.button-style{
+    padding: 12px 65px;
+    background: $button-gradient;
+    color:white;
+    border-radius: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    &:hover{
+        background:$button-hover;
+    }
+}
+
+.title {
+    text-align: center;
+            margin-block: 20px 80px;
+            font-size: 40px;
+            position: relative;
+            h3 {
+                font-weight: 300;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                text-align: center;
+                left: 42%;
+                transform: translateX(-42%);
+                bottom: -20px;
+                width: 30px;
+                margin: auto;
+                height: 2px;
+                background: $button-gradient;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                text-align: center;
+                left: 53%;
+                transform: translateX(-53%);
+                bottom: -20px;
+                width: 195px;
+                margin: auto;
+                height: 2px;
+                background: $button-gradient;
+            }
+
+
+            /* make title underline reponsive */
+            @media (max-width:1200px){
+                font-size: 35px;
+
+                &::before{
+                    left: 35%;
+                    transform: translateX(-35%);
+                }
+            }
+            @media (max-width:768px){
+                &::before{
+                    left: 30%;
+                    transform: translateX(-30%);
+                }
+            }
+}
