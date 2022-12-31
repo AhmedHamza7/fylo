@@ -13,6 +13,10 @@
     cursor: pointer;
 }
 
+.text-white {
+    color:white;
+}
+
 .button-style{
     padding: 12px 65px;
     background: $button-gradient;
@@ -20,58 +24,51 @@
     border-radius: 20px;
     font-weight: 700;
     cursor: pointer;
+    transition: all 0.4s ease ;
     &:hover{
-        background:$button-hover;
+        background:linear-gradient(to left , hsl(176, 68%, 64%) , hsl(198, 60%, 50%));
     }
 }
 
 .title {
-    text-align: center;
-            margin-block: 20px 80px;
-            font-size: 40px;
+            text-align: center;
+            margin-block: 60px 100px;
+            font-size: 30px;
             position: relative;
-            h3 {
                 font-weight: 300;
-            }
-            &::before{
+
+            &::before {
                 content: '';
-                position: absolute;
-                text-align: center;
-                left: 42%;
-                transform: translateX(-42%);
-                bottom: -20px;
-                width: 30px;
-                margin: auto;
-                height: 2px;
-                background: $button-gradient;
-            }
-            &::after{
+                display: inline-block;
+                width: 5rem;
+                height: 3px;
+                background-color: hsl(198, 60%, 50%);
+                margin: 0 25px 8px 0;
+              }
+              
+              &::after {
                 content: '';
-                position: absolute;
-                text-align: center;
-                left: 53%;
-                transform: translateX(-53%);
-                bottom: -20px;
-                width: 195px;
-                margin: auto;
-                height: 2px;
-                background: $button-gradient;
-            }
+                display: inline-block;
+                width: 5rem;
+                height: 3px;
+                background-color: hsl(198, 60%, 50%);
+                margin: 0 0 8px 25px;
+              }
 
 
             /* make title underline reponsive */
-            @media (max-width:1200px){
-                font-size: 35px;
+            // @media (max-width:1200px){
+            //     font-size: 35px;
 
-                &::before{
-                    left: 35%;
-                    transform: translateX(-35%);
-                }
-            }
-            @media (max-width:768px){
-                &::before{
-                    left: 30%;
-                    transform: translateX(-30%);
-                }
-            }
+            //     &::before{
+            //         left: 35%;
+            //         transform: translateX(-35%);
+            //     }
+            // }
+            // @media (max-width:768px){
+            //     &::before{
+            //         left: 30%;
+            //         transform: translateX(-30%);
+            //     }
+            // }
 }
