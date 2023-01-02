@@ -14,18 +14,18 @@ html(lang="en")
         nav(class='section-padding')
             input(type="checkbox" id="check")
             label(for="check" class="checkbtn")
-                img(src='images/icon-hamburger.svg' id='open-nav')
+                i(class='fa-solid fa-bars fa-3x' id='open-nav')
             .nav-content(class='container')
                 .nav-logo
                     img(src='images/logo.svg')
                 .nav-list
                     ul
-                        each val in ['Home', 'Features', 'Team','Sign up']
+                        each val in ['Home', 'About', 'Features','Testimonials', 'Contact']
                             a(href='#'+ val)
                                 li.pointer=val 
 
         //- ======= header section =====
-        header 
+        header(id='Home') 
             .container 
                 .header-content 
                     .header-img 
@@ -37,17 +37,17 @@ html(lang="en")
                     .header-button
                         button(class='button-style') Get Started
 
-
+        - var aboutCounter = [{count:'10+',title:'Years Experiance'},{count:'250+',title:'Happy Clients'},{count:'650+',title:'Projects Done'},{count:'38',title:'Get Awards'}]
         //-======= about section ======
-        section(class='about section-padding')
+        section(class='about section-padding' id='About')
             .container 
                 .about-title
                     h2(class='title text-white') ABOUT
                 
-                .about-content(class='about-item') 
-                    .about-image
+                .about-content 
+                    .about-image(class='about-item' data-aos="fade-up-right")
                         img(src='images/illustration-stay-productive.png')
-                    .about-text(class='about-item')
+                    .about-text(class='about-item' data-aos="fade-up-left")
                         h3(class='text-white') Stay productive, #[br] wherever you are
                         p(class='text-white') Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs. #[br] #[br] Securely share files and folders with friends, family and colleagues for live collaboration. No email 
                                 | attachments required.
@@ -56,23 +56,32 @@ html(lang="en")
                         a(class='text-white pointer') See how Fylo works
                             i(class="fa-solid fa-angles-right")
                         
+            div(class="about-content-bottom")
+                    .overlay 
+                        each val in aboutCounter
+                            div(class="about-counter")
+                                h4(data-aos="fade-down-right")=val.count
+                                p(data-aos="fade-up")=val.title
+                    
         //- ===== features section =====
-        - var features = [{image:'images/icon-access-anywhere.svg', head:'Access your files, anywhere', text:`The ability to use a smartphone, tablet, or computer ${[br]} to access your account means your files follow you everywhere.` },{image:'images/icon-security.svg', head:'Security you can trust', text:'factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.' },{image:'images/icon-collaboration.svg', head:'Real-time collaboration', text:'Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.' },{image:'images/icon-any-file.svg', head:'Store any type of file', text:"Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared." }]
-        section(class='features section-padding')
+        - var features = [{image:'images/icon-access-anywhere.svg', head:'Access your files, anywhere', text:`The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.`, name:'ACCESS'},{image:'images/icon-security.svg', head:'Security you can trust', text:'factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.' , name:'SECURE'},{image:'images/icon-collaboration.svg', head:'Real-time collaboration', text:'Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.', name:'TIME' },{image:'images/icon-any-file.svg', head:'Store any type of file', text:"Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.", name:'STORE'}]
+        section(class='features section-padding' id='Features')
             .container
                 .about-title
                     h2(class='title text-white') FEATURES
                 .features-content
                     each val in features
-                        .features-item 
+                        .features-item(data-aos="flip-left") 
                             img(src=val.image)
                             .features-text 
                                 h3=val.head
                                 p=val.text
+                            .feature-hover 
+                                p=val.name
                         
-        //- testimonials section
+        //-====== testimonials section =====
         - var testimonials = [{img:'images/profile-1.jpg', feedback:'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.', name:'Satish Patel', hisWork:'Founder & CEO, Huddle'}, {img:'images/profile-2.jpg', feedback:'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.', name:'Bruce McKenzie', hisWork:'Founder & CEO, Huddle'}, {img:'images/profile-3.jpg', feedback:'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.', name:'Iva Boyd', hisWork:'Founder & CEO, Huddle'}]
-        section(class='testimonials section-padding')
+        section(class='testimonials section-padding' id='Testimonials')
             .container 
                 .testimonials-title 
                     h2(class='title text-white') TESTIMONIALS
@@ -80,7 +89,7 @@ html(lang="en")
                     .quote-img 
                         img(src='images/bg-quotes.png')
                     each val in testimonials
-                        .testimonials-item(class='item')
+                        .testimonials-item(class='testimonials-item' data-aos="zoom-in-down")
                             p(class='feedback text-white')=val.feedback
                             .person 
                                 .person-img 
@@ -89,13 +98,13 @@ html(lang="en")
                                     h4=val.name 
                                     p=val.hisWork
 
-        //- contact section
-        section(class='contact section-padding')
+        //-===== contact section ======
+        section(class='contact section-padding' id='Contact')
             .container 
-                .contact-title 
+                .contact-title
                     h2(class='title text-white') CONTACT
                 .contact-content 
-                    .contact-form 
+                    .contact-form(data-aos="fade-up-left")  
                         .form-text 
                             h4 Get in touch 
                             p Please fill out the form on this section to contact with me. Or call between 9:00 a.m. and 8:00 p.m. ET, Monday through Friday.
@@ -108,20 +117,19 @@ html(lang="en")
                         .contact-button
                             button.button-style Send Message
 
-                    .contact-map
+                    .contact-map(data-aos="flip-right") 
                             iframe(src="https://google.com/maps/embed/v1/place?key=AIzaSyAYBpeIr5j02T63_xtKTs3l5vC8eLsNqqI&q=Eiffel+Tower,Paris+France" frameborder="0" width="100%" height="550") Your browser does not support iframes.
-
-        //- ======== footer section =======
-        footer(class='footer section-padding')
-            .container 
                 .access(class='text-white') 
                     h4 Get early access today
                     p It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.
                     .access-input 
                         input(type="text" placeholder="example@fylo.com") 
                         button(class='button-style') Get Started For Free
+        //- ======== footer section =======
+        footer(class='footer section-padding')
+            .container 
                 .footer-content
-                    .footer-social
+                    .footer-social(data-aos='fade-up')
                         img(src='images/logo.svg')
                         .social 
                             a(href="")
@@ -132,14 +140,14 @@ html(lang="en")
                                 i(class="fa-brands fa-pinterest")
                             a(href="")
                                 i(class="fa-brands fa-instagram")
-                    .footer-list 
+                    .footer-list(data-aos='fade-down') 
                         ul 
                             each val in ['About us', 'Contact','Blog']
                                 li.pointer=val
                         ul 
                             each val in ['Careers', 'Support','Privacy Policy']
                                 li.pointer=val
-                    .footer-copyright
+                    .footer-copyright(data-aos='fade-left')
                         .footer-button 
                             button(class='pointer button-style') Request Invite 
                         .footer-copyright-text 

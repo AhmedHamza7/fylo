@@ -12,20 +12,21 @@
   <body>
     <nav class="section-padding">
       <input type="checkbox" id="check">
-      <label class="checkbtn" for="check"><img src="images/icon-hamburger.svg" id="open-nav"></label>
+      <label class="checkbtn" for="check"><i class="fa-solid fa-bars fa-3x" id="open-nav"></i></label>
       <div class="nav-content container">
         <div class="nav-logo"><img src="images/logo.svg"></div>
         <div class="nav-list">
           <ul><a href="#Home">
-              <li class="pointer">Home</li></a><a href="#Features">
-              <li class="pointer">Features</li></a><a href="#Team">
-              <li class="pointer">Team</li></a><a href="#Sign up">
-              <li class="pointer">Sign up</li></a>
+              <li class="pointer">Home</li></a><a href="#About">
+              <li class="pointer">About</li></a><a href="#Features">
+              <li class="pointer">Features</li></a><a href="#Testimonials">
+              <li class="pointer">Testimonials</li></a><a href="#Contact">
+              <li class="pointer">Contact</li></a>
           </ul>
         </div>
       </div>
     </nav>
-    <header> 
+    <header id="Home"> 
       <div class="container"> 
         <div class="header-content"> 
           <div class="header-img"> <img src="images/illustration-intro.png"></div>
@@ -39,61 +40,93 @@
         </div>
       </div>
     </header>
-    <section class="about section-padding">
+    <section class="about section-padding" id="About">
       <div class="container"> 
         <div class="about-title">
           <h2 class="title text-white">ABOUT</h2>
         </div>
-        <div class="about-content about-item"> 
-          <div class="about-image"><img src="images/illustration-stay-productive.png"></div>
-          <div class="about-text about-item">
+        <div class="about-content"> 
+          <div class="about-image about-item" data-aos="fade-up-right"><img src="images/illustration-stay-productive.png"></div>
+          <div class="about-text about-item" data-aos="fade-up-left">
             <h3 class="text-white">Stay productive, <br> wherever you are</h3>
             <p class="text-white">Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs. <br> <br> Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p><br><br><a class="text-white pointer">See how Fylo works<i class="fa-solid fa-angles-right"></i></a>
           </div>
         </div>
       </div>
+      <div class="about-content-bottom">
+        <div class="overlay"> 
+          <div class="about-counter">
+            <h4 data-aos="fade-down-right">10+</h4>
+            <p data-aos="fade-up">Years Experiance</p>
+          </div>
+          <div class="about-counter">
+            <h4 data-aos="fade-down-right">250+</h4>
+            <p data-aos="fade-up">Happy Clients</p>
+          </div>
+          <div class="about-counter">
+            <h4 data-aos="fade-down-right">650+</h4>
+            <p data-aos="fade-up">Projects Done</p>
+          </div>
+          <div class="about-counter">
+            <h4 data-aos="fade-down-right">38</h4>
+            <p data-aos="fade-up">Get Awards</p>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="features section-padding">
+    <section class="features section-padding" id="Features">
       <div class="container">
         <div class="about-title">
           <h2 class="title text-white">FEATURES</h2>
         </div>
         <div class="features-content">
-          <div class="features-item"> <img src="images/icon-access-anywhere.svg">
+          <div class="features-item" data-aos="flip-left"> <img src="images/icon-access-anywhere.svg">
             <div class="features-text"> 
               <h3>Access your files, anywhere</h3>
-              <p>The ability to use a smartphone, tablet, or computer  to access your account means your files follow you everywhere.</p>
+              <p>The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.</p>
+            </div>
+            <div class="feature-hover"> 
+              <p>ACCESS</p>
             </div>
           </div>
-          <div class="features-item"> <img src="images/icon-security.svg">
+          <div class="features-item" data-aos="flip-left"> <img src="images/icon-security.svg">
             <div class="features-text"> 
               <h3>Security you can trust</h3>
               <p>factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.</p>
             </div>
+            <div class="feature-hover"> 
+              <p>SECURE</p>
+            </div>
           </div>
-          <div class="features-item"> <img src="images/icon-collaboration.svg">
+          <div class="features-item" data-aos="flip-left"> <img src="images/icon-collaboration.svg">
             <div class="features-text"> 
               <h3>Real-time collaboration</h3>
               <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
             </div>
+            <div class="feature-hover"> 
+              <p>TIME</p>
+            </div>
           </div>
-          <div class="features-item"> <img src="images/icon-any-file.svg">
+          <div class="features-item" data-aos="flip-left"> <img src="images/icon-any-file.svg">
             <div class="features-text"> 
               <h3>Store any type of file</h3>
               <p>Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.</p>
+            </div>
+            <div class="feature-hover"> 
+              <p>STORE</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="testimonials section-padding">
+    <section class="testimonials section-padding" id="Testimonials">
       <div class="container"> 
         <div class="testimonials-title"> 
           <h2 class="title text-white">TESTIMONIALS</h2>
         </div>
         <div class="testimonials-content">
           <div class="quote-img"> <img src="images/bg-quotes.png"></div>
-          <div class="testimonials-item item">
+          <div class="testimonials-item testimonials-item" data-aos="zoom-in-down">
             <p class="feedback text-white">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
             <div class="person"> 
               <div class="person-img"> <img src="images/profile-1.jpg"></div>
@@ -103,7 +136,7 @@
               </div>
             </div>
           </div>
-          <div class="testimonials-item item">
+          <div class="testimonials-item testimonials-item" data-aos="zoom-in-down">
             <p class="feedback text-white">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
             <div class="person"> 
               <div class="person-img"> <img src="images/profile-2.jpg"></div>
@@ -113,7 +146,7 @@
               </div>
             </div>
           </div>
-          <div class="testimonials-item item">
+          <div class="testimonials-item testimonials-item" data-aos="zoom-in-down">
             <p class="feedback text-white">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
             <div class="person"> 
               <div class="person-img"> <img src="images/profile-3.jpg"></div>
@@ -126,13 +159,13 @@
         </div>
       </div>
     </section>
-    <section class="contact section-padding">
+    <section class="contact section-padding" id="Contact">
       <div class="container"> 
-        <div class="contact-title"> 
+        <div class="contact-title">
           <h2 class="title text-white">CONTACT</h2>
         </div>
         <div class="contact-content"> 
-          <div class="contact-form"> 
+          <div class="contact-form" data-aos="fade-up-left"> 
             <div class="form-text"> 
               <h4>Get in touch </h4>
               <p>Please fill out the form on this section to contact with me. Or call between 9:00 a.m. and 8:00 p.m. ET, Monday through Friday.</p>
@@ -150,14 +183,10 @@
               <button class="button-style">Send Message</button>
             </div>
           </div>
-          <div class="contact-map">
+          <div class="contact-map" data-aos="flip-right"> 
             <iframe src="https://google.com/maps/embed/v1/place?key=AIzaSyAYBpeIr5j02T63_xtKTs3l5vC8eLsNqqI&amp;q=Eiffel+Tower,Paris+France" frameborder="0" width="100%" height="550">Your browser does not support iframes.</iframe>
           </div>
         </div>
-      </div>
-    </section>
-    <footer class="footer section-padding">
-      <div class="container"> 
         <div class="access text-white"> 
           <h4>Get early access today</h4>
           <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
@@ -166,11 +195,15 @@
             <button class="button-style">Get Started For Free</button>
           </div>
         </div>
+      </div>
+    </section>
+    <footer class="footer section-padding">
+      <div class="container"> 
         <div class="footer-content">
-          <div class="footer-social"><img src="images/logo.svg">
+          <div class="footer-social" data-aos="fade-up"><img src="images/logo.svg">
             <div class="social"> <a href=""><i class="fa-brands fa-facebook"></i></a><a href=""><i class="fa-brands fa-twitter"></i></a><a href=""><i class="fa-brands fa-pinterest"></i></a><a href=""><i class="fa-brands fa-instagram"></i></a></div>
           </div>
-          <div class="footer-list"> 
+          <div class="footer-list" data-aos="fade-down"> 
             <ul> 
               <li class="pointer">About us</li>
               <li class="pointer">Contact</li>
@@ -182,7 +215,7 @@
               <li class="pointer">Privacy Policy</li>
             </ul>
           </div>
-          <div class="footer-copyright">
+          <div class="footer-copyright" data-aos="fade-left">
             <div class="footer-button"> 
               <button class="pointer button-style">Request Invite </button>
             </div>

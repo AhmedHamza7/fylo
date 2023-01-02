@@ -8,6 +8,11 @@
 
 .section-padding {
     padding-block: 60px;
+
+/*==== make it responsive in mobile app ======*/
+    @media (max-width:768px){
+        padding-block: 30px;
+    }
 }
 .pointer {
     cursor: pointer;
@@ -18,15 +23,18 @@
 }
 
 .button-style{
-    padding: 12px 65px;
+    padding: 10px 45px;
     background: $button-gradient;
     color:white;
     border-radius: 20px;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.4s ease ;
+    transition: 0.4s all ease;
     &:hover{
-        background:linear-gradient(to left , hsl(176, 68%, 64%) , hsl(198, 60%, 50%));
+        padding: 10px 60px;
+        background-color:transparent;
+        background: none;
+        border: 1px solid white;
     }
 }
 
@@ -36,7 +44,6 @@
             font-size: 30px;
             position: relative;
                 font-weight: 300;
-
             &::before {
                 content: '';
                 display: inline-block;
@@ -56,19 +63,20 @@
               }
 
 
-            /* make title underline reponsive */
-            // @media (max-width:1200px){
-            //     font-size: 35px;
-
-            //     &::before{
-            //         left: 35%;
-            //         transform: translateX(-35%);
-            //     }
-            // }
-            // @media (max-width:768px){
-            //     &::before{
-            //         left: 30%;
-            //         transform: translateX(-30%);
-            //     }
-            // }
+            /* make title reponsive */
+            @media (max-width:768px){
+                font-size: 26px;
+                &::before {
+                    width: 4rem;
+                    height: 3px;
+                    background-color: hsl(198, 60%, 50%);
+                    margin: 0 25px 8px 0;
+                  }
+                  
+                  &::after {
+                    width: 4rem;
+                    height: 3px;
+                    margin: 0 0 8px 25px;
+                  }
+            }
 }
