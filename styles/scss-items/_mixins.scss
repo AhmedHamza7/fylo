@@ -61,3 +61,18 @@
     transition: 0.4s all ease;
 }
 
+/* ======= Animations =====*/ 
+
+@mixin move-up($Y0,$Y50,$Y100){
+    @keyframes move {
+        0%{
+            transform: translate(0,$Y0);
+        }
+        50%{
+            transform: translate(0,$Y50);
+        }
+        100%{
+            transform: translate(0,$Y100);
+        }
+    }
+}

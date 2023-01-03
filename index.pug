@@ -11,7 +11,7 @@ html(lang="en")
         link(rel="stylesheet", href="styles/style.css")
     body
         //- ======= Nav section ========
-        nav(class='section-padding')
+        nav
             input(type="checkbox" id="check")
             label(for="check" class="checkbtn")
                 i(class='fa-solid fa-bars fa-3x' id='open-nav')
@@ -56,7 +56,7 @@ html(lang="en")
                         a(class='text-white pointer') See how Fylo works
                             i(class="fa-solid fa-angles-right")
                         
-            div(class="about-content-bottom")
+            div(class="about-content-bottom" data-aos="fade-down-right")
                     .overlay 
                         each val in aboutCounter
                             div(class="about-counter")

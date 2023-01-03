@@ -40,15 +40,17 @@ nav, button, h1, h2, h3, h4 {
 
 /*====== nav style ======*/
 nav {
+    position: fixed;
     width: 100%;
     z-index: 999;
     background-color: $intro-background;
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.497);
     #check,.checkbtn{
         display: none;
     }
     .nav-content{
         @include flexible(space-between);
-        padding-block: 15px;
+        margin-block: 15px;
         .nav-logo {
             img {
                 width: 150px;
@@ -83,8 +85,8 @@ nav {
     .checkbtn{
                 display: inline-block;
                 position: absolute;
-                right:60px;
-                top:70px;
+                right:50px;
+                top:20px;
                 cursor: pointer;
                 z-index: 3;
                 i{
@@ -94,7 +96,7 @@ nav {
     }
     .nav-content{
                 @include flexible(space-between);
-                padding-block: 15px;
+                padding-block: 5px;
                 position: relative;
                 .nav-logo {
                     img {
@@ -131,20 +133,20 @@ nav {
             /* ======= OPEN MOBILE NAV =======*/ 
             #check:checked ~ .nav-content{
                     .nav-list{
-                    top: 120%;
+                    top: 200%;
                     }
                     
                 }
             }
     
     @media(max-width:768px) {
-        .checkbtn{
-            right:25px;
-            top:42px;
-            i{
-                font-size: 40px;
+            .checkbtn{
+                right:30px;
+                top:20px;
+                i{
+                    font-size: 40px;
+                }
             }
-        }
     }
 
 }
@@ -153,9 +155,8 @@ nav {
 /*====== header style ======*/
 header {
     height: 100vh;
-    padding-block: 100px;
+    padding-block: 150px;
     background-color: $intro-background;
-
     background-image: url('../images/bg-curvy-desktop.svg');
     background-repeat: no-repeat;
     background-position: bottom;
@@ -165,9 +166,12 @@ header {
             text-align: center;
             color: white;
             .header-img{
+                animation: move 2s infinite;
+                @include move-up(-10%, -100%, -10%);
                 img {
                     width: 70%;
                 }
+                
             }
 
             .header-text{
@@ -262,6 +266,8 @@ header {
                     font-size:calc(1.425rem + 2.1vw);
                     font-weight: 400;
                     margin: 0;
+                    animation: move 2s infinite;
+                    @include move-up(-5px, -20px, -5px);
                 }
                 p{
                     margin: 0;
@@ -285,7 +291,7 @@ header {
             text-align: center;
             gap: 2rem;
             .features-item {
-                width: calc(90%/ 2);
+                width: calc((100%/ 2) - 2rem);
                 box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
                 padding-block: 30px;
                 transition: all 0.6s ease;
@@ -297,7 +303,6 @@ header {
                     color:transparent;
                     height: 0%;
                     transition: all 0.6s ease;
-
                 }
                 .features-text{
                     color:white;
@@ -481,7 +486,6 @@ header {
 /* ====== footer style ===== */
 .footer {
     background-color: $footer-background;
-    position: relative;
     padding-top: 170px;
     margin-top: 150px;
     .container{
@@ -633,7 +637,21 @@ header {
     .container{
         width: 95% !important;
     }
-    
+    .about-content-bottom{
+        .overlay{
+            flex-wrap: wrap;
+            .about-counter {
+                width: 100% !important;
+                padding-block: 25px;
+                border-bottom: 1px dashed white;
+
+                &:last-child{
+                    border-bottom: none;
+
+                }
+            }
+        }
+    }
     .testimonials-content{
         .testimonials-item{
             width: 100% !important;
