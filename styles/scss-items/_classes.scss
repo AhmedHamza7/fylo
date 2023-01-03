@@ -5,10 +5,8 @@
     width:80%;
     margin: auto;
 }
-
 .section-padding {
     padding-block: 60px;
-
 /*==== make it responsive in mobile app ======*/
     @media (max-width:768px){
         padding-block: 30px;
@@ -17,11 +15,10 @@
 .pointer {
     cursor: pointer;
 }
-
 .text-white {
     color:white;
 }
-
+// ===== page buttons style =====
 .button-style{
     padding: 10px 45px;
     background: $button-gradient;
@@ -37,7 +34,7 @@
         border: 1px solid white;
     }
 }
-
+//========= section title style =====
 .title {
             text-align: center;
             margin-block: 60px 100px;
@@ -65,7 +62,7 @@
 
             /* make title reponsive */
             @media (max-width:768px){
-                font-size: 26px;
+                font-size: 24px;
                 &::before {
                     width: 4rem;
                     height: 3px;

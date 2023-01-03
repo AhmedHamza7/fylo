@@ -4,6 +4,8 @@
 @use 'scss-items/vars' as *;
 @use 'scss-items/classes' as *;
 
+
+// ======== GLOBAL STYLES ====== 
 html {
     scroll-behavior: smooth;
   }
@@ -36,7 +38,7 @@ ul {
 nav, button, h1, h2, h3, h4 {
     font-family: 'head-font';
 }
-
+ // ===== END GLOBAL STYLE ======
 
 /*====== nav style ======*/
 nav {
@@ -171,9 +173,7 @@ header {
                 img {
                     width: 70%;
                 }
-                
             }
-
             .header-text{
                 h2 {
                     font-size: 30px;
@@ -201,7 +201,6 @@ header {
                     width: 80%;
                 }
             }
-
             .about-text{
                 h3 {
                     font-size: 40px;
@@ -228,11 +227,9 @@ header {
                     &:hover {
                         color:hsl(176, 68%, 64%);
                         border-bottom: 0px;
-
                         &::after{
                             width: 100%;
                         }
-
                         i {
                             color:hsl(176, 68%, 64%);}
                         }
@@ -315,7 +312,6 @@ header {
                         line-height: 24px;
                     }
                 }
-
                 &:hover{
                     box-shadow: hsl(176, 68%, 64%) -5px 5px, hsl(198, 60%, 50%) -10px 10px ;
                     .feature-hover{
@@ -361,7 +357,6 @@ header {
                 background-color: $feedback-background;
                 padding: 30px;
                 border-radius: 10px;
-
                 .feedback{
                     margin-block: 15px 20px;
                 }
@@ -391,7 +386,6 @@ header {
 /* ======== contact style =======*/ 
 .contact{
     position: relative;
-
     .container{
         .contact-content{
             display: flex;
@@ -408,7 +402,6 @@ header {
                         width: 200px;
                         margin-bottom: 20px;
                         padding-bottom: 10px;
-
                     }
                 }
                 .input{
@@ -433,13 +426,10 @@ header {
                     }
                 }
             }
-
             .contact-map{
                 width: 55%;
             }
         }
-
-    
     }
     .access{
         width: 50%;
@@ -461,7 +451,6 @@ header {
             margin-block: 30px;
             line-height: 25px;
         }
-
         .access-input {
             display: flex;
             justify-content: space-between;
@@ -489,7 +478,6 @@ header {
     padding-top: 170px;
     margin-top: 150px;
     .container{
-        
         .footer-content{
             display: flex;
             .footer-social{
@@ -536,7 +524,7 @@ header {
         }
     }
 
-    @media (max-width:768px){
+@media (max-width:768px){
         .container{
             .footer-content{
                 flex-wrap: wrap;
@@ -588,7 +576,6 @@ header {
     }
 }
 
-
 @media (max-width:992px){
     .container{
         width: 90% !important;
@@ -632,10 +619,21 @@ header {
 
 
 }
-
 @media (max-width:768px){
     .container{
         width: 95% !important;
+    }
+    h2 {
+        font-size: 24px !important;
+    }
+    .about{
+        h3{
+            font-size: 26px !important;
+            line-height: 35px !important;
+        }
+        p{
+            font-size: 16px !important;
+        }
     }
     .about-content-bottom{
         .overlay{
@@ -644,10 +642,12 @@ header {
                 width: 100% !important;
                 padding-block: 25px;
                 border-bottom: 1px dashed white;
-
                 &:last-child{
                     border-bottom: none;
-
+                }
+                h4{
+                    font-size: 34px !important;
+                    font-weight: bold !important;
                 }
             }
         }
@@ -663,6 +663,13 @@ header {
         }
     }
 
+    .form-text{
+        h4 {
+            font-size:22px;
+            letter-spacing: 2px;
+            font-weight: 300;
+        }
+    }
     .features-content {
         gap: 1rem !important; 
         .features-item {
@@ -674,7 +681,22 @@ header {
         }
         }
     }
-
+    .footer{
+        .footer-social{
+            img{
+                width: 120px;
+            }
+            i{
+                font-size: 22px !important;
+                margin-inline: 2px;
+            }
+        }
+        .footer-list{
+            li{
+                font-size: 22px !important;
+            }
+        }
+    }
     .access {
         width: 90% !important;
         bottom:-15% !important;

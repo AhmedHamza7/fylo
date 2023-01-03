@@ -76,7 +76,7 @@
 }
 @media (max-width: 768px) {
   .title {
-    font-size: 26px;
+    font-size: 24px;
   }
   .title::before {
     width: 4rem;
@@ -725,6 +725,16 @@ header .container .header-content .header-text p {
   .container {
     width: 95% !important;
   }
+  h2 {
+    font-size: 24px !important;
+  }
+  .about h3 {
+    font-size: 26px !important;
+    line-height: 35px !important;
+  }
+  .about p {
+    font-size: 16px !important;
+  }
   .about-content-bottom .overlay {
     flex-wrap: wrap;
   }
@@ -736,6 +746,10 @@ header .container .header-content .header-text p {
   .about-content-bottom .overlay .about-counter:last-child {
     border-bottom: none;
   }
+  .about-content-bottom .overlay .about-counter h4 {
+    font-size: 34px !important;
+    font-weight: bold !important;
+  }
   .testimonials-content .testimonials-item {
     width: 100% !important;
     margin-bottom: 25px;
@@ -743,6 +757,11 @@ header .container .header-content .header-text p {
   }
   .testimonials-content .testimonials-item:last-child {
     margin-top: 0px;
+  }
+  .form-text h4 {
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: 300;
   }
   .features-content {
     gap: 1rem !important;
@@ -754,6 +773,16 @@ header .container .header-content .header-text p {
   }
   .features-content .features-item .features-text {
     width: 80% !important;
+  }
+  .footer .footer-social img {
+    width: 120px;
+  }
+  .footer .footer-social i {
+    font-size: 22px !important;
+    margin-inline: 2px;
+  }
+  .footer .footer-list li {
+    font-size: 22px !important;
   }
   .access {
     width: 90% !important;
