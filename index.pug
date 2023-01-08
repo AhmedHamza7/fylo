@@ -6,6 +6,7 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title FYLO 
 
+        link(rel="shortcut icon", href="images/favicon-32x32.png", type="image/x-icon")
         link(rel='stylesheet' href='styles/all.min.css')
         link(rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css")
         link(rel="stylesheet", href="styles/style.css")
@@ -18,14 +19,13 @@ html(lang="en")
             .nav-content(class='container')
                 .nav-logo
                     img(src='images/logo.svg')
-                .nav-list
+                .nav-list(id='nav-menu')
                     ul
                         each val in ['Home', 'About', 'Features','Testimonials', 'Contact']
-                            a(href='#'+ val)
+                            a(data-section=val href='#'+ val )
                                 li.pointer=val 
-
         //- ======= header section =====
-        header(id='Home') 
+        section(id='Home' class='header') 
             .container 
                 .header-content 
                     .header-img 
@@ -36,14 +36,12 @@ html(lang="en")
                             |you need, share and collaborate #[br] with friends family, and co-workers.
                     .header-button
                         button(class='button-style') Get Started
-
         - var aboutCounter = [{count:'10+',title:'Years Experiance'},{count:'250+',title:'Happy Clients'},{count:'650+',title:'Projects Done'},{count:'38',title:'Get Awards'}]
         //-======= about section ======
         section(class='about section-padding' id='About')
             .container 
                 .about-title
                     h2(class='title text-white') ABOUT
-                
                 .about-content 
                     .about-image(class='about-item' data-aos="fade-up-right")
                         img(src='images/illustration-stay-productive.png')
@@ -62,7 +60,6 @@ html(lang="en")
                             div(class="about-counter")
                                 h4(data-aos="fade-down-right")=val.count
                                 p(data-aos="fade-up")=val.title
-                    
         //- ===== features section =====
         - var features = [{image:'images/icon-access-anywhere.svg', head:'Access your files, anywhere', text:`The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.`, name:'ACCESS'},{image:'images/icon-security.svg', head:'Security you can trust', text:'factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.' , name:'SECURE'},{image:'images/icon-collaboration.svg', head:'Real-time collaboration', text:'Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.', name:'TIME' },{image:'images/icon-any-file.svg', head:'Store any type of file', text:"Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.", name:'STORE'}]
         section(class='features section-padding' id='Features')
@@ -78,7 +75,6 @@ html(lang="en")
                                 p=val.text
                             .feature-hover 
                                 p=val.name
-                        
         //-====== testimonials section =====
         - var testimonials = [{img:'images/profile-1.jpg', feedback:'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.', name:'Satish Patel', hisWork:'Founder & CEO, Huddle'}, {img:'images/profile-2.jpg', feedback:'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.', name:'Bruce McKenzie', hisWork:'Founder & CEO, Huddle'}, {img:'images/profile-3.jpg', feedback:'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.', name:'Iva Boyd', hisWork:'Founder & CEO, Huddle'}]
         section(class='testimonials section-padding' id='Testimonials')
@@ -97,7 +93,6 @@ html(lang="en")
                                 .person-info(class='text-white') 
                                     h4=val.name 
                                     p=val.hisWork
-
         //-===== contact section ======
         section(class='contact section-padding' id='Contact')
             .container 
@@ -151,7 +146,7 @@ html(lang="en")
                         .footer-button 
                             button(class='pointer button-style') Request Invite 
                         .footer-copyright-text 
-                            p © Easybank. All Rights Reserved
+                            p © FYLO. All Rights Reserved
 
         script(src="https://unpkg.com/aos@next/dist/aos.js")
         script(src='js/script.js')            

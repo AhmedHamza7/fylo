@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FYLO </title>
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="styles/style.css">
@@ -15,18 +16,18 @@
       <label class="checkbtn" for="check"><i class="fa-solid fa-bars fa-3x" id="open-nav"></i></label>
       <div class="nav-content container">
         <div class="nav-logo"><img src="images/logo.svg"></div>
-        <div class="nav-list">
-          <ul><a href="#Home">
-              <li class="pointer">Home</li></a><a href="#About">
-              <li class="pointer">About</li></a><a href="#Features">
-              <li class="pointer">Features</li></a><a href="#Testimonials">
-              <li class="pointer">Testimonials</li></a><a href="#Contact">
+        <div class="nav-list" id="nav-menu">
+          <ul><a data-section="Home" href="#Home">
+              <li class="pointer">Home</li></a><a data-section="About" href="#About">
+              <li class="pointer">About</li></a><a data-section="Features" href="#Features">
+              <li class="pointer">Features</li></a><a data-section="Testimonials" href="#Testimonials">
+              <li class="pointer">Testimonials</li></a><a data-section="Contact" href="#Contact">
               <li class="pointer">Contact</li></a>
           </ul>
         </div>
       </div>
     </nav>
-    <header id="Home"> 
+    <section class="header" id="Home"> 
       <div class="container"> 
         <div class="header-content"> 
           <div class="header-img"> <img src="images/illustration-intro.png"></div>
@@ -39,7 +40,7 @@
           </div>
         </div>
       </div>
-    </header>
+    </section>
     <section class="about section-padding" id="About">
       <div class="container"> 
         <div class="about-title">
@@ -220,7 +221,7 @@
               <button class="pointer button-style">Request Invite </button>
             </div>
             <div class="footer-copyright-text"> 
-              <p>© Easybank. All Rights Reserved</p>
+              <p>© FYLO. All Rights Reserved</p>
             </div>
           </div>
         </div>

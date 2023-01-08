@@ -61,7 +61,7 @@ nav {
         .nav-list{
             font-size: 18px;
             ul{
-                li {
+                a {
                     box-shadow: inset 0 0 0 0 #54b3d6;
                     color: white;
                     padding: .15rem 0.50rem;
@@ -70,7 +70,7 @@ nav {
                     transition: color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
                     &:hover {
                         color: #fff;
-                        box-shadow: inset 200px 0 0 0 #54b3d6;;
+                        box-shadow: inset 200px 0 0 0 #54b3d6;
                       }
                 }
                   
@@ -87,12 +87,12 @@ nav {
     .checkbtn{
                 display: inline-block;
                 position: absolute;
-                right:50px;
-                top:20px;
+                right:30px;
+                top:13px;
                 cursor: pointer;
                 z-index: 3;
                 i{
-                font-size: 40px;
+                    font-size: 35px;
                     color: white;
                 }
     }
@@ -100,14 +100,15 @@ nav {
                 @include flexible(space-between);
                 padding-block: 5px;
                 position: relative;
+                max-height: 30px !important;
                 .nav-logo {
                     img {
-                        width: 120px;
+                        width: 100px;
                     }
                 }
                 .nav-list{
                     position: absolute;
-                    top: -1120%;
+                    top: -2200%;
                     left: 50%;
                     transform: translateX(-50%);
                     background-color: $feedback-background;
@@ -116,7 +117,7 @@ nav {
                     text-align: center;
                     ul{
                         
-                        li{
+                        a{
                             margin:25px 0px;
                             padding-block: 15px;
                             display: block;
@@ -125,8 +126,8 @@ nav {
                             box-shadow: none;
                             &:hover {
                                 color: #fff;
-                                box-shadow: inset 0 400px 0 0 #54b3d6;;
-                              }
+                                box-shadow: inset 0 400px 0 0 #54b3d6;
+                            }
                         }
                     }
                 }
@@ -140,22 +141,9 @@ nav {
                     
                 }
             }
-    
-    @media(max-width:768px) {
-            .checkbtn{
-                right:30px;
-                top:20px;
-                i{
-                    font-size: 40px;
-                }
-            }
-    }
-
 }
-  
-
 /*====== header style ======*/
-header {
+.header {
     height: 100vh;
     padding-block: 150px;
     background-color: $intro-background;
@@ -178,6 +166,8 @@ header {
                 h2 {
                     font-size: 30px;
                     line-height: 40px;
+                    color: white;
+                    font-family: 'main-font';
                 }
                 p{
                     margin-block:25px;
@@ -187,7 +177,6 @@ header {
         }
     }
 }
-
 /*===== about style =====*/
 .about {
     .container{
@@ -278,7 +267,6 @@ header {
         }
     }
 }
-
 /* ======= features style ===== */
 .features {
     .container{
@@ -307,13 +295,19 @@ header {
                     margin: auto;
                     h3 {
                         margin-block: 15px;
+                        transition: 0.6s all ease;
                     }
                     p{
                         line-height: 24px;
                     }
                 }
                 &:hover{
-                    box-shadow: hsl(176, 68%, 64%) -5px 5px, hsl(198, 60%, 50%) -10px 10px ;
+                    h3{
+                        transform: translateY(-70px);
+                        background-color: $main-background;
+                        // font-size: 35px;
+                        letter-spacing: 4px;
+                    }
                     .feature-hover{
                         position: absolute;
                         margin: 0;
@@ -338,9 +332,7 @@ header {
         }
     }
 }
-
 /* ======= testimonials style =====*/
-
 .testimonials {
     .container{
         .testimonials-content{
@@ -357,6 +349,26 @@ header {
                 background-color: $feedback-background;
                 padding: 30px;
                 border-radius: 10px;
+                overflow: hidden;
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top:-100%;
+                    height: 100%;
+                    right: 50%;
+                    left: 0;
+                    border-radius: 10px;
+                    z-index: -1;
+                    background-color: hsl(198, 60%, 50%);  
+                    transition: 0.6s all ease; 
+                }
+                &:hover{
+                    &::before{
+                        top:0;
+                        right: 0%;
+                    }
+                }
                 .feedback{
                     margin-block: 15px 20px;
                 }
@@ -381,8 +393,6 @@ header {
         }
     }
 }
-
-
 /* ======== contact style =======*/ 
 .contact{
     position: relative;
@@ -471,7 +481,6 @@ header {
         }
     }
 }
-
 /* ====== footer style ===== */
 .footer {
     background-color: $footer-background;
@@ -524,19 +533,22 @@ header {
         }
     }
 
-@media (max-width:768px){
+@media (max-width:888px){
         .container{
             .footer-content{
                 flex-wrap: wrap;
                 .footer-social{
                     width: 100%;
                     justify-content: center;
+                    img{
+                        width: 130px;
+                    }
                     .social{
                         margin-top: 40px;
                         text-align: center;
                         i{
-                            margin-inline: 17px;
-                            font-size: 30px;
+                            margin-inline: 10px;
+                            font-size: 24px;
                         }
                     }
                 }
@@ -548,8 +560,8 @@ header {
                         width: 100%;
                         text-align: center;
                         li{
-                            line-height: 70px;
-                            font-size: 26px;
+                            line-height: 50px;
+                            font-size: 20px;
                         }
                     }
                 }
@@ -559,11 +571,10 @@ header {
                     flex-wrap: wrap;
                     justify-content: center;
                     align-content: space-between;
-
                     .footer-button {
                         margin-block: 30px;
                         button{
-                            font-size: 22px;
+                            font-size: 14px;
                         }
                     }
                     .footer-copyright-text{
@@ -575,6 +586,9 @@ header {
         }
     }
 }
+
+
+
 
 @media (max-width:992px){
     .container{
@@ -597,15 +611,17 @@ header {
             }
         }
     }
-
+    
     .features-content {
         gap: 1rem !important; 
+        text-align: start !important;
         .features-item {
             width: calc((100%/ 2) - 1rem) !important;
-            padding-block: 20px;
+            padding: 20px 0 20px 30px;
             cursor: pointer;
             .features-text{
                 width: 80% !important;
+                margin: 0 !important;
         }
         }
     }
@@ -679,22 +695,6 @@ header {
             .features-text{
                 width: 80% !important;
         }
-        }
-    }
-    .footer{
-        .footer-social{
-            img{
-                width: 120px;
-            }
-            i{
-                font-size: 22px !important;
-                margin-inline: 2px;
-            }
-        }
-        .footer-list{
-            li{
-                font-size: 22px !important;
-            }
         }
     }
     .access {
